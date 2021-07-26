@@ -1,23 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        int account_amount = 500;
-        int new_payment = 1200;
+        int accountAmount = 500;
+        int newPayment = 1200;
 
         int bonus;
-        if (new_payment < 1000) {
+        if (newPayment < 1000) {
             bonus = 0;
-        }
-        else {
-            bonus = new_payment / 100;
+        } else {
+            bonus = newPayment / 100;
         }
 
-        int final_amount;
-        if (new_payment > 1000) {
-            final_amount = bonus + new_payment + account_amount;
+        int finalAmount;
+        if (newPayment > 1000) {
+            finalAmount = bonus + newPayment + accountAmount;
+        } else {
+            finalAmount = newPayment + accountAmount;
         }
-        else {
-            final_amount = new_payment + account_amount;
-        }
-        System.out.println(final_amount);
-        System.out.println(bonus);}
+        System.out.println(finalAmount);
+        System.out.println(bonus);
+    }
 }
